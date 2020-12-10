@@ -1,3 +1,5 @@
-# advent-of-code-2020
+# adventofcode-2020
 
-Part One only 😴
+> https://adventofcode.com/2020
+
+For this year, Part One only... 😴
