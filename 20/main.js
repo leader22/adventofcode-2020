@@ -23,13 +23,11 @@ const { txt2arr } = require("../shared/utils");
   }
 
   const corners = tiles
-    .map(({ id, matches }) => ({ id, matches }))
-    .sort((a, b) => a.matches - b.matches)
-    .slice(0, 4);
-    // .forEach((t) => console.log(t));
+    .map(({ id, matches }) => ({ id, matches: matches / 2 - 4 }))
+    .sort((a, b) => a.matches - b.matches);
   console.log(corners);
 
-  const answer = corners.reduce((acc, cur) => {
+  const answer = corners.slice(0, 4).reduce((acc, cur) => {
     acc *= cur.id;
     return acc;
   }, 1);
